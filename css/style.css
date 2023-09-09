@@ -670,4 +670,10 @@ footer {
 
 .mobile-slider {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+img{
+  pointer-events:none; //no thing from yandex on the images
+}
+
+
+/*# sourceMappingURL=style.css.map */
