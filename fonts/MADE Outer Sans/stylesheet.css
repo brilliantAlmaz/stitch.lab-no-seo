@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "MADE Outer Sans";
+	src: url("MADE-Outer-Sans-Bold.eot");
+	src:
+		local("MADE Outer Sans Bold"),
+		local("MADE-Outer-Sans-Bold"),
+		url("MADE-Outer-Sans-Bold.eot?#iefix") format("embedded-opentype"),
+		url("MADE-Outer-Sans-Bold.woff") format("woff"),
+		url("MADE-Outer-Sans-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}

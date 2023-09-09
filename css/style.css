@@ -1,0 +1,673 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+html.lock,
+body.lock {
+  overflow-y: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+header,
+footer {
+  background: #000;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: #202020;
+  z-index: 50;
+}
+.header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #202020;
+  z-index: 40;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 50;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  color: #fff;
+  font-family: MADE Outer Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.header__menu ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__link {
+  color: #fff;
+  /* text-little */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: all 0.3s ease 0s;
+}
+.header__link:before {
+  content: "/";
+}
+.header__link:hover {
+  color: #f7954f;
+}
+
+.header__btn {
+  max-width: 200px;
+}
+
+.btn {
+  display: block;
+  padding: 11px 30px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f7954f;
+  color: #fff;
+  font-family: RoadRadio;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  color: #f7954f;
+  background: #fff;
+}
+
+.header__burger {
+  display: block;
+  position: relative;
+  width: 33px;
+  z-index: 100;
+  height: 25px;
+}
+.header__burger span, .header__burger:before, .header__burger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all 0.3s ease 0s;
+}
+.header__burger span {
+  top: 11px;
+}
+.header__burger:before {
+  top: 0;
+}
+.header__burger:after {
+  top: 22px;
+}
+.header__burger.active span {
+  width: 0;
+  background: #f7954f;
+}
+.header__burger.active:after {
+  top: 11px;
+  transform: rotate(45deg);
+  background: #f7954f;
+}
+.header__burger.active:before {
+  top: 11px;
+  transform: rotate(-45deg);
+  background: #f7954f;
+}
+
+.burger {
+  display: none;
+}
+
+.main {
+  position: relative;
+  padding: 130px 0 0;
+}
+.main .container {
+  position: relative;
+  display: block;
+  z-index: 5;
+}
+.main .bg-mask {
+  background: rgba(65, 65, 65, 0.55);
+  mix-blend-mode: overlay;
+}
+
+.main__title {
+  color: #fff;
+  text-shadow: 0px 0px 50px #fff;
+  /* logo */
+  font-family: MADE Outer Sans;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.main__desc {
+  margin: 20px 0 0 0;
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 26.4px */
+}
+
+.main__btn {
+  max-width: 300px;
+  margin: 60px 0 0 0;
+  padding: 20px 30px;
+  font-size: 24px;
+}
+
+.main__imageblock {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 20px;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  z-index: 3;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transform: rotate(10deg);
+}
+
+.main__imageblock-items {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.main__imageblock-items img {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-body {
+  overflow: hidden;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(65, 65, 65, 0.6);
+  z-index: 1;
+}
+
+.bg-image {
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about {
+  padding: 70px 0 90px;
+  position: relative;
+}
+.about .container {
+  position: relative;
+  z-index: 10;
+}
+.about .bg-mask {
+  background: var(--gradient, linear-gradient(175deg, #1b1b1b 4.12%, rgba(47, 47, 47, 0.5) 100.23%));
+}
+
+.titleblock {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+
+.title {
+  color: #fff;
+  text-shadow: 0px 0px 50px rgb(255, 255, 255);
+  /* title */
+  font-family: RoadRadio;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  line-height: 70%;
+}
+
+.desc {
+  margin: -10px 0 0 0;
+  color: #fff;
+  /* text-little */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.desc:before {
+  content: "/";
+}
+
+.about__text {
+  margin: 15px 0 0 0;
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about__body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about__item-imageblock {
+  margin: 50px 0 0 0;
+  position: relative;
+  min-height: 170px;
+}
+.about__item-imageblock:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 120px;
+  top: 7px;
+  left: 10px;
+  border-radius: 10px;
+  background: rgba(255, 158, 87, 0.8);
+  z-index: 1;
+}
+.about__item-imageblock img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 24px;
+  left: 27px;
+  z-index: 5;
+}
+
+.about__item-num {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  padding: 4px 10px;
+  background: #fff;
+  color: #f7954f;
+  font-family: MADE Outer Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 8px;
+  z-index: 5;
+}
+
+.about__item-text {
+  margin: 15px 0 0 0;
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.prints {
+  padding: 70px 0 60px;
+  position: relative;
+}
+.prints .container {
+  position: relative;
+  z-index: 10;
+}
+.prints .bg-mask {
+  transform: rotate(180deg);
+  background: var(--gradient, linear-gradient(175deg, #1b1b1b 4.12%, rgba(47, 47, 47, 0.5) 100.23%));
+}
+
+.prints__titleblock {
+  display: flex;
+}
+
+.prints__body {
+  margin: 50px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.prints__item {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+}
+.prints__item img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease 0s;
+}
+.prints__item:last-child {
+  transition: all 0.3s ease 0s;
+  padding: 25px 15px;
+  background: rgba(0, 0, 0, 0.3137254902);
+}
+.prints__item:last-child span {
+  color: #fff;
+  font-family: RoadRadio;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.prints__item:last-child:hover {
+  background: #000;
+}
+.prints__item:hover img {
+  left: -20%;
+  width: 140%;
+  height: 140%;
+}
+
+.reviews {
+  position: relative;
+  padding: 70px 0 80px;
+}
+.reviews .container {
+  position: relative;
+  z-index: 10;
+}
+.reviews .bg-mask {
+  transform: rotate(180deg);
+  background: var(--gradient, linear-gradient(175deg, #1b1b1b 4.12%, rgba(47, 47, 47, 0.5) 100.23%));
+}
+
+.reviews__body {
+  margin: 50px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.reviews__item {
+  display: flex;
+  gap: 10px;
+}
+
+.review__imageblock {
+  position: relative;
+  min-width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.review__imageblock:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.57;
+  background: linear-gradient(180deg, rgba(247, 149, 79, 0.25) 0.31%, #ff9242 99.69%);
+}
+
+.reivews__name {
+  color: #f7954f;
+  text-shadow: 0px 0px 50px rgba(247, 149, 79, 0.5);
+  font-family: RoadRadio;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reviews__comment {
+  margin: 10px 0 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.reviews__date {
+  display: block;
+  margin: 5px 0 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  /* text-little */
+  font-family: Segoe UI;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.footer {
+  padding: 40px 0 70px;
+  position: relative;
+}
+.footer .container {
+  position: relative;
+  z-index: 10;
+}
+.footer .bg-mask {
+  background: rgba(0, 0, 0, 0.59);
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  color: #fff;
+  font-family: MADE Outer Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.footer__menu {
+  margin: 5px 0 0 0;
+}
+.footer__menu .header__link {
+  display: block;
+  margin: 15px 0 0 0;
+}
+
+.footer__links {
+  display: block;
+}
+
+.footer__phone {
+  color: #fff;
+  display: block;
+  text-align: right;
+  font-family: RoadRadio;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.footer__phone:hover {
+  color: #f7954f;
+}
+
+.footer__location {
+  text-align: right;
+  margin: 10px 0 0 0;
+  display: block;
+  color: #fff;
+  font-family: RoadRadio;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.footer__location:hover {
+  color: #f7954f;
+}
+
+.mobile-slider {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
