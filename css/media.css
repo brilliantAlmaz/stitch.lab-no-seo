@@ -116,7 +116,7 @@
     right: 0;
     left: 0;
     margin: 0 auto;
-    bottom: 40px;
+    bottom: 25px;
     z-index: 1000;
   }
 }
@@ -367,4 +367,7 @@
   .about__title {
     font-size: 27px;
   }
+}
+img {
+  pointer-events: none;
 }/*# sourceMappingURL=media.css.map */
